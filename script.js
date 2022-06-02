@@ -29,7 +29,9 @@ function oneCallWeather(lat, lon, cityname) {
         var weatherIcon = $("<img>").attr("src",`http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`)
         var cityTemp = $("<p>").addClass("city-temp").text("Temp: " + data.current.temp).attr("style", "text-align: center");
         var cityWind = $("<p>").addClass("city-wind").text("Wind: " + data.current.wind_speed + " MPH").attr("style", "text-align: center");
-        $("#weather-main").append(card.append(cardTitle.append(weatherIcon)).append(cityTemp).append(cityWind));
+        var cityHumidity = $("<p>").addClass("city-humidity").text("Humidity: " + data.current.humidity + "%").attr("style", "text-align: center");
+        var cityUvi = $("<p>").addClass("city-uvi").text("UV Index: " + data.current.uvi).attr("style", "text-align: center");
+        $("#weather-main").append(card.append(cardTitle.append(weatherIcon)).append(cityTemp).append(cityWind).append(cityHumidity).append(cityUvi));
         for (var i = 0; i < data.daily.length; i++) {
             makeDailyCard(data.daily[i]);
         }
