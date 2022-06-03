@@ -12,5 +12,5 @@ I was tasked with creating a weather app which allows the user to search a city 
 ![Weather App](/WeatherApp.png)
 
 ## Resources
-- [Live Site](https://n3330.github.io/my-calendar-app/)
-- [Repository](https://github.com/N3330/my-calendar-app)
+- [Live Site](https://n3330.github.io/weather-forecast/)
+- [Repository](https://github.com/N3330/weather-forecast)
