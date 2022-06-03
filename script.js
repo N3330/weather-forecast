@@ -5,6 +5,7 @@ searchBtn.addEventListener("click", function () {
     init();
 })
 function init() {
+    // renderButtons(cityField.value);
     fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + cityField.value + '&limit=1&appid=1374e4a6a1e7a7a7dc0cb2635ac040ac')
         .then(function (response) {
             return response.json();
@@ -13,7 +14,27 @@ function init() {
             oneCallWeather(data[0].lat, data[0].lon, data[0].name);
         });
 }
+// function renderButtons(){
+//     // fetch local storage array 
+//     var cities = JSON.parse(localStorage.getItem('cities'));
+//     console.log(cities);
+//     if (cities==null) {
+// //         cities = [];
+// //         cities.push(city);
+// //         localStorage.setItem("cityname",JSON.stringify(cities));
+// //     }
 
+//     // if cities == null { make own array and push the param city to it}
+    
+//     // push to cities
+//     //set cities in local storage to new array
+
+//     // itererate through cities array and generate buttons  
+
+//     // for (var i = 0; i < cities.length; i++)
+//     //create buttons out of cities[i]
+//     // append to html 
+// }
 
 function oneCallWeather(lat, lon, cityname) {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=alerts,minutely,hourly&appid=1374e4a6a1e7a7a7dc0cb2635ac040ac`)
