@@ -37,6 +37,8 @@ function init() {
 // }
 
 function oneCallWeather(lat, lon, cityname) {
+    document.querySelector("#weather-main").innerHTML = "";
+    document.querySelector("#weather5").innerHTML = "";
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=alerts,minutely,hourly&appid=1374e4a6a1e7a7a7dc0cb2635ac040ac`)
         .then(function (response) {
             return response.json();
