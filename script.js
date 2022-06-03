@@ -6,7 +6,7 @@ searchBtn.addEventListener("click", function () {
 })
 function init() {
     // renderButtons(cityField.value);
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=' + cityField.value + '&limit=1&appid=1374e4a6a1e7a7a7dc0cb2635ac040ac')
+    fetch('https://api.openweathermap.org/geo/1.0/direct?q=' + cityField.value + '&limit=1&appid=1374e4a6a1e7a7a7dc0cb2635ac040ac')
         .then(function (response) {
             return response.json();
         })
